@@ -60,32 +60,6 @@ Dataset_nosilence/
 *.m4a
 *.aac
 
-# MFCC Features
-MFCC/
-*.mfcc
-
-# Trained Models
-GMM/
-*.pkl
-*.joblib
-*.h5
-*.model
-
-# Generated Plots and Results
-COURBES DET/
-TBI_Plots_By_Component/
-TBI_Plots_By_Segment/
-*.png
-*.jpg
-*.jpeg
-*.pdf
-*.eps
-*.svg
-
-# Scores and Results
-scores.txt
-*.csv
-*.tsv
 
 # System Files
 desktop.ini
