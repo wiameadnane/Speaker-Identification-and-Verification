@@ -2,7 +2,7 @@
 
 A comprehensive speaker verification and recognition system using Gaussian Mixture Models (GMM) and Mel-Frequency Cepstral Coefficients (MFCC) for audio feature extraction.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project implements a robust speaker verification and recognition system that can:
 - **Identify speakers** from audio samples (Speaker Identification)
@@ -10,7 +10,7 @@ This project implements a robust speaker verification and recognition system tha
 - **Process various audio segment lengths** (5s, 10s, 15s)
 - **Achieve high accuracy** with optimized GMM configurations
 
-## 📊 Key Results
+## Key Results
 
 ### Best Performance Metrics
 - **Speaker Identification Rate (TBI)**: Up to **84.35%** accuracy
@@ -24,7 +24,7 @@ This project implements a robust speaker verification and recognition system tha
 | 10 seconds       | 77.39%   | 27.52%   | 64 components     |
 | 15 seconds       | 84.35%   | 19.44%   | 32-128 components |
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### Data Pipeline
 ```
@@ -39,7 +39,7 @@ Audio Segments → Feature Vectors → Likelihood Scores → Classification/Veri
 3. **Modeling**: Gaussian Mixture Models with diagonal covariance
 4. **Evaluation**: Both identification and verification metrics
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 PROJECT1/
@@ -61,7 +61,7 @@ PROJECT1/
 └── Project notebook.ipynb       # Main implementation
 ```
 
-## 🔬 Technical Implementation
+## Technical Implementation
 
 ### 1. Audio Preprocessing
 - **Sampling Rate**: 16 kHz (optimized for WebRTC VAD)
@@ -90,7 +90,7 @@ PROJECT1/
 - **Threshold Optimization**: Grid search from -136 to -43 (likelihood range)
 - **DET Curves**: Generated for all component-segment combinations
 
-## 📈 Performance Analysis
+## Performance Analysis
 
 ### Speaker Identification Results
 
@@ -107,7 +107,7 @@ Best verification performance achieved:
 - **Most Stable**: 32-128 components across different segment lengths
 - **Threshold Range**: Optimal thresholds between -56.5 and -52.5
 
-## 🖼️ Visual Results
+## Visual Results
 
 ### TBI Performance by Components
 ![TBI by Components](TBI_Plots_By_Component/TBI_n32.png)
@@ -125,7 +125,7 @@ Best verification performance achieved:
 ![General EER](COURBES%20DET/general_EER_plot.png)
 *Equal Error Rate comparison across all configurations*
 
-## ⚙️ Requirements
+## Requirements
 
 ### Python Dependencies
 ```python
@@ -145,7 +145,7 @@ matplotlib         # Plotting
 - **Memory**: Sufficient RAM for loading multiple audio files
 - **Storage**: Space for processed features and models
 
-## 🚀 Usage
+## Usage
 
 ### 1. Data Preparation
 ```python
@@ -185,7 +185,7 @@ verification_data = evaluate_verification(gmm_dir, mfcc_dir)
 - **Testing**: Multiple segments (5s, 10s, 15s) for comprehensive evaluation
 - **Total Test Samples**: 1,151 test samples across all configurations
 
-## 🔍 Key Findings
+## Key Findings
 
 1. **Segment Duration Impact**: Longer audio segments significantly improve performance
 2. **Optimal Component Count**: 32-128 GMM components provide best balance of accuracy and efficiency
@@ -193,7 +193,7 @@ verification_data = evaluate_verification(gmm_dir, mfcc_dir)
 4. **Feature Robustness**: MFCC features prove effective for speaker characterization
 5. **Verification vs Identification**: EER around 19-20% achievable for verification tasks
 
-## 🎯 Applications
+## Applications
 
 This system can be applied to:
 - **Security Systems**: Biometric authentication using voice
@@ -202,18 +202,10 @@ This system can be applied to:
 - **Smart Devices**: Voice-controlled personal assistants
 - **Access Control**: Voice-based building or system access
 
-## 📚 References
+## References
 
 The implementation is based on established techniques in speaker recognition:
 - Gaussian Mixture Models for speaker modeling
 - MFCC feature extraction for speech characterization
 - WebRTC VAD for robust voice activity detection
 - Standard evaluation metrics (TBI, EER, DET curves)
-
-## 👥 Contributors
-
-- **Wiame Adnane** - Implementation and Analysis
-
----
-
-*This project demonstrates the effectiveness of GMM-based speaker recognition systems and provides a comprehensive evaluation framework for speaker verification applications.*
